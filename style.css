@@ -11,17 +11,34 @@ background:#eee;
 	border-radius:10px;
 	margin:10px auto;
 }
-.fa-users{
+.login-wrap h2{
+	padding-bottom:20px;
 	font-size:80px;
 }
+.login-wrap form{
+	border:1px solid #ccc;
+	border-right:0px;
+	border-left:0px;
+}
+.form-group{
+	width:320px;
+	margin:60px auto;
+}
 .form-group input[type=email]{
-	width:360px;
 	border-bottom:0px;
 	border-radius:5px 5px 0px 0px;
-	margin:auto;
 }
 .form-group input[type=password]{
-	width:360px;
 	border-radius: 0px 0px 5px 5px;
+}
+.form-group input[type=submit]{
+	margin:40px 0px 0px 0px;
+}
+.login-footer{
+	width:320px;
 	margin:auto;
+	padding:20px 0 20px 0;
+}
+.login-footer a{
+	color:#333;
 }

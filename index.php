@@ -1,3 +1,6 @@
+<?php
+include('cookie.inc');
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en"> 
 <head>
@@ -13,21 +16,25 @@
 </head>
 <body>
 <?php
-include("database/databaseconnect.inc");
+$show_login_page = true;
+$show_dashboard_page = false;
 ?>
-<h1 class="text-center margin-top-100">Student Login</h1>
-<div class="login-wrap">
-	<h2 class="text-center"><span class="fa fa-users"></span></h2>
-	<form role="form">
-	<div class="form-group">
-		<input type="email" class="form-control" placeholder="Email address" />
-		<input type="password" class="form-control" placeholder="Password" />
-	</div>
-    <span class="fa fa-lock"></span>
-    <button type="submit" class="btn btn-default">Submit</button>
-	<span class="fa fa-check"></span>
-  </form>
-</div>
 
+<?php
+if(isset($_POST['loginformsubmitted'])):
+	include("login_process.inc");
+	if($is_login_approved==true):
+		$show_dashboard_page=true;
+		$show_login_page=false;
+	endif;
+endif;
+
+if($show_login_page):
+	include("login.inc");
+elseif($show_dashboard_page):
+	include("dashboard.inc");
+endif;
+
+?>
 </body>
 </html>
