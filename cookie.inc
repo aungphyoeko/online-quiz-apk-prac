@@ -1,6 +1,6 @@
 <?php
 if(!isset($_COOKIE['online-quiz-apk'])){
-	setcookie('online-quiz-apk','0,guest,null');
+	setcookie('online-quiz-apk','0,guest');
 }		
 function cookie_get($value){
 	$txt=explode(',',$_COOKIE['online-quiz-apk']);
@@ -9,8 +9,6 @@ function cookie_get($value){
 			return $txt[0];
 		case 'name':
 			return $txt[1];
-		case 'email':
-			return $txt[2];
 		default:
 			return 'None';
 	}

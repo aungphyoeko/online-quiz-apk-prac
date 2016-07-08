@@ -1,17 +1,18 @@
 body{
 background:#eee;
 }
-.margin-top-100{
-	margin:100px auto 0px auto;
+.user-caption{
+	margin-top:100px;
 }
 .login-wrap{
 	width:400px;
 	background:#fff;
 	border:1px solid #ccc;
 	border-radius:10px;
+	display:block;
 	margin:10px auto;
 }
-.login-wrap h2{
+.login-wrap h2,h1.user-caption{
 	padding-bottom:20px;
 	font-size:80px;
 }
@@ -20,43 +21,34 @@ background:#eee;
 	border-right:0px;
 	border-left:0px;
 }
-.form-group{
+.login-wrap.form-group{
 	width:320px;
 	margin:60px auto;
 }
-.form-group input[type=email]{
+.login-wrap.form-group input[type=email]{
 	border-bottom:0px;
 	border-radius:5px 5px 0px 0px;
 }
-.form-group input[type=password]{
+.login-wrap.form-group input[type=password]{
 	border-radius: 0px 0px 5px 5px;
 }
-.form-group input[type=submit]{
+.login-wrap.form-group input[type=submit]{
 	margin:40px 0px 0px 0px;
 }
-.login-footer{
+.login-wrap.login-footer{
 	width:320px;
 	margin:auto;
 	padding:20px 0 20px 0;
 }
-.login-footer a{
+.login-wrap.login-footer a{
 	color:#333;
 }
-.navbar{
-	margin:auto;
-	background:#fff;
-}
+
 .navbar-right{
 	margin-right:0px;
 }
 .nav li{
 	padding-left:15px;
-}
-li.dropdown:hover >ul.dropdown-menu {
-	display:block;
-}
-ul.dropdown-menu > li:hover>a:hover{
-	background:#fff;
 }
 .cointainer{
 	padding:10px;

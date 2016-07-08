@@ -1,6 +1,6 @@
 <?php
-require 'page_processing.inc';
 require 'cookie.inc';
+require 'page_processing.inc';
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en"> 
@@ -17,6 +17,8 @@ elseif($show_dashboard_page):
 	include 'dashboard.inc';
 elseif($show_profile_page):
 	include 'profile.inc';
+elseif($show_setting_page):
+	include 'setting.inc';
 endif;
 
 ?>

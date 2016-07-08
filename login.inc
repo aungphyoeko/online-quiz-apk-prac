@@ -1,4 +1,4 @@
-<h1 class="text-center margin-top-100">Student Login</h1>
+<h1 class="text-center user-caption">Student Login</h1>
 <div class="login-wrap">
 	<h2 class="text-center"><span class="fa fa-users"></span></h2>
 	<form role="form" data-toggle="validator" action="index.php" method="post">
