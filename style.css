@@ -12,7 +12,7 @@ background:#eee;
 	display:block;
 	margin:10px auto;
 }
-.login-wrap h2,h1.user-caption{
+.login-wrap h2 , h1.user-caption{
 	padding-bottom:20px;
 	font-size:80px;
 }
@@ -21,26 +21,26 @@ background:#eee;
 	border-right:0px;
 	border-left:0px;
 }
-.login-wrap.form-group{
+.login-wrap .form-group{
 	width:320px;
 	margin:60px auto;
 }
-.login-wrap.form-group input[type=email]{
+.login-wrap .form-group input[type=email]{
 	border-bottom:0px;
 	border-radius:5px 5px 0px 0px;
 }
-.login-wrap.form-group input[type=password]{
+.login-wrap .form-group input[type=password]{
 	border-radius: 0px 0px 5px 5px;
 }
-.login-wrap.form-group input[type=submit]{
+.login-wrap .form-group input[type=submit]{
 	margin:40px 0px 0px 0px;
 }
-.login-wrap.login-footer{
+.login-wrap  .login-footer{
 	width:320px;
 	margin:auto;
 	padding:20px 0 20px 0;
 }
-.login-wrap.login-footer a{
+.login-wrap .login-footer a{
 	color:#333;
 }
 
@@ -50,6 +50,7 @@ background:#eee;
 .nav li{
 	padding-left:15px;
 }
-.cointainer{
+.profile-cointainer{
 	padding:10px;
+	margin:auto;
 }

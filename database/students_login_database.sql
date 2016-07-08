@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 07, 2016 at 11:00 AM
+-- Generation Time: Jul 08, 2016 at 11:26 AM
 -- Server version: 5.7.11
 -- PHP Version: 5.6.19
 
@@ -32,15 +32,18 @@ CREATE TABLE `students_login` (
   `id` int(11) NOT NULL,
   `name` varchar(25) DEFAULT NULL,
   `email` varchar(25) NOT NULL,
-  `pass` text NOT NULL
+  `pass` text NOT NULL,
+  `dob` date DEFAULT NULL,
+  `pref` varchar(5) NOT NULL,
+  `address` text NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `students_login`
 --
 
-INSERT INTO `students_login` (`id`, `name`, `email`, `pass`) VALUES
-(1, 'Aung', 'test@gmail.com', 'pass');
+INSERT INTO `students_login` (`id`, `name`, `email`, `pass`, `dob`, `pref`, `address`) VALUES
+(1, 'Aung', 'test@gmail.com', 'pass', '2016-07-01', 'mr', 'Mandalay');
 
 --
 -- Indexes for dumped tables
