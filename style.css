@@ -42,3 +42,22 @@ background:#eee;
 .login-footer a{
 	color:#333;
 }
+.navbar{
+	margin:auto;
+	background:#fff;
+}
+.navbar-right{
+	margin-right:0px;
+}
+.nav li{
+	padding-left:15px;
+}
+li.dropdown:hover >ul.dropdown-menu {
+	display:block;
+}
+ul.dropdown-menu > li:hover>a:hover{
+	background:#fff;
+}
+.cointainer{
+	padding:10px;
+}
