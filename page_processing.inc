@@ -6,10 +6,6 @@ $show_setting_page = false;
 
 if(isset($_POST['loginformsubmitted'])):
 	include 'login_process.inc';
-	if(cookie_get('id')!=0):
-		$show_login_page=false;
-		$show_dashboard_page = true;
-	endif;
 elseif (isset($_GET['page'])) :
 	$show_login_page=false;
 	switch($_GET['page']){
@@ -22,7 +18,10 @@ elseif (isset($_GET['page'])) :
 			break;
 		case 'setting':
 			$show_setting_page=true; 
-			break;	
+			break;
+		case 'dashboard':
+			$show_dashboard_page = true;
+			break;
 		default:
 			$show_login_page=true;
 	}
