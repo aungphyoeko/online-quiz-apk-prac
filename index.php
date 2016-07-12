@@ -22,6 +22,5 @@ elseif($show_setting_page):
 endif;
 
 ?>
-
 </body>
 </html>

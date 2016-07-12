@@ -1,18 +1,32 @@
 body{
 background:#eee;
+overflow-x:hidden;
 }
-.user-caption{
-	margin-top:100px;
+.height-control{
+	position: relative;
+  max-width:100vh;
+  max-height:100%;
+  margin:0 auto;
+  overflow: hidden;
 }
+.height-control:before {
+  content: "";
+  display: block;
+  margin-top: 100%;
+}
+.child {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/* ----------Login page ------------*/
 .login-wrap{
-	width:400px;
 	background:#fff;
 	border:1px solid #ccc;
 	border-radius:10px;
-	display:block;
 	margin:10px auto;
 }
-.login-wrap h2 , h1.user-caption{
+.login-wrap h2 {
 	padding-bottom:20px;
 	font-size:80px;
 }
@@ -21,9 +35,9 @@ background:#eee;
 	border-right:0px;
 	border-left:0px;
 }
-.login-wrap .form-group{
-	width:320px;
-	margin:60px auto;
+.login-wrap .form-group,.login-wrap  .login-footer{
+	width:80%;
+	margin:10% auto;
 }
 .login-wrap .form-group input[type=email]{
 	border-bottom:0px;
@@ -36,19 +50,16 @@ background:#eee;
 	margin:40px 0px 0px 0px;
 }
 .login-wrap  .login-footer{
-	width:320px;
-	margin:auto;
-	padding:20px 0 20px 0;
+	width:80%;
+	margin:3% auto;
 }
 .login-wrap .login-footer a{
 	color:#333;
 }
+/* ----------profile page ------------*/
 .personalinfo-cointainer{
 	padding:10px;
 	margin:auto;
-}
-.form-group button,.form-group span{
-	height:34px;
 }
 textarea{
 	min-height:100px;
@@ -59,53 +70,28 @@ textarea{
 	opacity:.65;
 }
 
-
-@media only screen and (max-width: 800px) {
-    
-    /* Force table to not be like tables anymore */
-	#no-more-tables table, 
-	#no-more-tables thead, 
-	#no-more-tables tbody, 
-	#no-more-tables th, 
-	#no-more-tables td, 
-	#no-more-tables tr { 
-		display: block; 
+/* ----------tablet and phones ------------*/
+@media (max-width: 767px){
+	/* ----------dashboard quiz table page ------------*/
+	.quiz-list-table  tr{
+		display:block;
+		position:relative;
+		border:1px solid #ddd;
+		margin-bottom:15px;
 	}
- 
-	/* Hide table headers (but not display: none;, for accessibility) */
-	#no-more-tables thead tr { 
-		position: absolute;
-		top: -9999px;
-		left: -9999px;
+	.quiz-list-table  tr td{
+		border:0px !important;
 	}
- 
-	#no-more-tables tr { border: 1px solid #ccc; }
- 
-	#no-more-tables td { 
-		/* Behave  like a "row" */
-		border: none;
-		border-bottom: 1px solid #eee; 
-		position: relative;
-		padding-left: 50%; 
-		white-space: normal;
+	.quiz-list-table  .text-right{
 		text-align:left;
 	}
- 
-	#no-more-tables td:before { 
-		/* Now like a table header */
-		position: absolute;
-		/* Top/left values mimic padding */
-		top: 6px;
-		left: 6px;
-		width: 45%; 
-		padding-right: 10px; 
-		white-space: nowrap;
-		text-align:left;
-		font-weight: bold;
+	.quiz-list-table .btn{
+		width:100%;
 	}
- 
-	/*
-	Label the data
-	*/
-	#no-more-tables td:before { content: attr(data-title); }
+	.quiz-list-table  .td-top-right{
+		position:absolute;
+		top:0px;
+		right:0px;
+	}
+	
 }
