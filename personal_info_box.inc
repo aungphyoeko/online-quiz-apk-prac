@@ -1,12 +1,21 @@
 <?php
+require 'database/databaseconnect.inc';
+include_once 'cookie.inc';
+$sql = 'SELECT name,email,dob,pref,address FROM students_login WHERE id='.cookie_get('id');
+$result = $db->query($sql);
+$db->close();
+if($result->num_rows==1) $personal_data = $result->fetch_assoc();
+else die("Cannot connect to database.");
+$dob = explode('-',$personal_data['dob']);
+krsort($dob);
+$dob = implode('-',$dob);
+$disabled = true;
+
+
 if(isset($_POST['disabled'])){
 	$disabled =true;
 	if($_POST['disabled']=='false') $disabled = false;
-	$personal_data['name'] = $_POST['name'];
-	$personal_data['pref'] = $_POST['pref'];
-	$personal_data['email'] = $_POST['email'];
-	$personal_data['address'] = $_POST['address'];
-	$dob  = str_replace(',','-',$_POST['dob']);
+	
 }
 ?>
 <?php

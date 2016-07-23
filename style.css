@@ -12,7 +12,7 @@ overflow-x:hidden;
 .height-control:before {
   content: "";
   display: block;
-  margin-top: 100%;
+  margin-top: 20%;
 }
 .child {
   position: absolute;
@@ -95,3 +95,9 @@ textarea{
 	}
 	
 }
+
+.progress-bar + .tooltip > .tooltip-inner {
+      background-color: #337ab7;
+      color: #FFFFFF;
+      padding: 15px;
+  }
