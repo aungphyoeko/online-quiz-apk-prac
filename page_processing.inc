@@ -3,10 +3,8 @@ $show_login_page = true;
 $show_dashboard_page = false;
 $show_profile_page = false;
 $show_setting_page = false;
-
-if(isset($_POST['loginformsubmitted'])):
-	include 'login_process.inc';
-elseif (isset($_GET['page'])) :
+$show_quiz_page = false;
+if (isset($_GET['page'])) :
 	$show_login_page=false;
 	switch($_GET['page']){
 		case 'logout':
@@ -21,6 +19,9 @@ elseif (isset($_GET['page'])) :
 			break;
 		case 'dashboard':
 			$show_dashboard_page = true;
+			break;
+		case 'quiz':
+			$show_quiz_page = true;
 			break;
 		default:
 			$show_login_page=true;

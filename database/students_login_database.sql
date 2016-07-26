@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 23, 2016 at 09:34 AM
+-- Generation Time: Jul 26, 2016 at 10:22 AM
 -- Server version: 5.7.11
 -- PHP Version: 5.6.19
 
@@ -19,6 +19,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `online-quiz`
 --
+CREATE DATABASE IF NOT EXISTS `online-quiz` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `online-quiz`;
 
 -- --------------------------------------------------------
 
@@ -133,6 +135,27 @@ INSERT INTO `quiz_list` (`quiz_id`, `quiz_name`, `quiz_level`, `leacture_id`) VA
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `score`
+--
+
+CREATE TABLE `score` (
+  `student_id` int(11) NOT NULL,
+  `quiz_id` int(11) NOT NULL,
+  `score` int(11) NOT NULL,
+  `total` int(11) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `score`
+--
+
+INSERT INTO `score` (`student_id`, `quiz_id`, `score`, `total`) VALUES
+(1, 1, 3, 4),
+(1, 2, 1, 2);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `students_login`
 --
 
@@ -183,6 +206,12 @@ ALTER TABLE `question_list`
 ALTER TABLE `quiz_list`
   ADD PRIMARY KEY (`quiz_id`),
   ADD UNIQUE KEY `quiz_id` (`quiz_id`);
+
+--
+-- Indexes for table `score`
+--
+ALTER TABLE `score`
+  ADD PRIMARY KEY (`student_id`,`quiz_id`);
 
 --
 -- Indexes for table `students_login`

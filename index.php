@@ -19,6 +19,8 @@ elseif($show_profile_page):
 	include 'profile.inc';
 elseif($show_setting_page):
 	include 'setting.inc';
+elseif($show_quiz_page):
+	include 'quiz.inc';
 endif;
 
 ?>
