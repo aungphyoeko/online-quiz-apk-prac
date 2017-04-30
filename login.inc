@@ -1,3 +1,4 @@
+<?php include 'database/databaseconnect.inc'; ?>
 <div class="height-control visible-md visible-lg">&nbsp;</div>
 <div class="login-wrap col-xs-10 col-sm-6 col-md-4 col-lg-3 col-xs-push-1 col-sm-push-3 col-md-push-4 col-lg-push-4">
 	<h2 class="text-center"><span class="fa fa-users"></span></h2>
@@ -25,7 +26,7 @@ $(function(){
 	
 	$("form").submit(function(e){
 		e.preventDefault();
-		$.post("login_process.inc",
+		$.post("login_process.php",
 		{
 			email:$("#email").val(),
 			password:$("#password").val()

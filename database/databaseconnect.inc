@@ -3,7 +3,7 @@ include("databasesetup.inc");
 $db;
 @$db = mysqli_connect($host, $user,$password,$database) ;
 if($db->connect_errno){
-    echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
+    die( "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error);
 }
 if(isset($_REQUEST['func'])){
 	if($_REQUEST['func']=='update'){
@@ -20,4 +20,5 @@ function updateSQL($sql){
 	if($db->query($sql)) return true;
 	return false;
 }
+
 ?>
