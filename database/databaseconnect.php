@@ -1,5 +1,5 @@
 <?php
-include("databasesetup.inc");
+include("databasesetup.php");
 $db;
 @$db = mysqli_connect($host, $user,$password,$database) ;
 if($db->connect_errno){

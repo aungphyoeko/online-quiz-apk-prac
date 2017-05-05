@@ -1,5 +1,5 @@
 <?php
-include 'database/databaseconnect.inc';
+include 'database/databaseconnect.php';
 $sql = 'SELECT id,name,pass FROM students_login WHERE email = "'.$_POST['email'].'" ';
 $result = $db->query($sql);
 if($result->num_rows ==1){
