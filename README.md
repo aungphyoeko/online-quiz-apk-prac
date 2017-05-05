@@ -1,14 +1,21 @@
 # online-quiz-apk-prac
-This project is for my educational purpose. Practicing php by developing online student quiz system
 
--Login system must be present and secured by password.
+This project is for my educational purpose. Practicing php by developing online quiz taking system
 
--Ability to save the answer given by the candidate along with the question.
+My objectives are
 
--Answer checking system should be available.
+-Student can Login / Logout
 
--Could Update Profile
+-Student can edit their profile
 
--Log out after the over.
+-MCQ and True/False questions for each quiz
 
--Admin Panel
+-Ability to score each answer.
+
+-Students can review the quiz they have taken
+
+-Instructor can add/remove quiz
+
+First Import /database/students_login_database.sql
+
+Then edit your database hostname, username, password in /database/databasesetup.php
