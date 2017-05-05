@@ -30,7 +30,7 @@
 				<li role="separator" class="divider"></li>
 				<li><a href="../setting/" id="setting">Setting</a></li>
 				<li role="separator" class="divider"></li>
-				<li><a href="../logout/" id="logout">Logout</a></li>
+				<li><a href="../logout.php" id="logout">Logout</a></li>
 			</ul>
 			</li>
 		</ul> 
