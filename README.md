@@ -4,7 +4,7 @@ This project is for my educational purpose. Practicing php by developing online 
 
 My objectives are
 
--Student Login / Logout
+-Student can Login / Logout
 
 -Student can edit their profile
 
