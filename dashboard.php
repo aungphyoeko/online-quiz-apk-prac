@@ -29,18 +29,20 @@ if($result->num_rows>0){
 			case '1':
 				$level = '<span class="btn btn-success">Easy</span>';break;
 			case '2':
-				$level = '<span class="btn btn-warning">Easy</span>';break;
+				$level = '<span class="btn btn-warning">Intermediate</span>';break;
 			case '3':
-				$level = '<span class="btn btn-danger">Easy</span>';break;
+				$level = '<span class="btn btn-danger">Hard</span>';break;
 			default:
-				$level = '<span class="btn btn-info"></span>';
+				$level = '<span class="btn btn-info">I have no Idea</span>';
 		}
 		$i++;
-		$scoredata = $db->query("SELECT score,total FROM score WHERE student_id = '$id' AND quiz_id = '$row[quiz_id]' ");
+		$scoredata = $db->query("SELECT score FROM score WHERE student_id = '$id' AND quiz_id = '$row[quiz_id]' ");
 		$scorerow= $scoredata->fetch_assoc();
-		$total = (int) $scorerow['total'];
+		$quizdata =$db->query("SELECT question_id FROM question_list WHERE quiz_id ='$row[quiz_id]' ");
+		$total = $quizdata->num_rows;//Total number of questions in the quiz
 		$score = (int) $scorerow['score'];
 		$percentage = ($score/$total) * 100;
+		$percentage = $percentage==0?2:$percentage;//fill a little just to notice it is a prograss bar
 ?>
 					<tr>
 						<td class="hidden-xs col-xs-0 col-sm-0 col-md-1 col-lg-1"><?php echo $i;?>.</td>
@@ -48,7 +50,7 @@ if($result->num_rows>0){
 						<td class="visible-xs-block visible-sm visible-md visible-lg col-xs-6 col-sm-2 col-md-2 col-lg-2 td-top-right"><?php echo $level;?></td>
 						<td class="visible-xs-block visible-sm visible-md visible-lg col-xs-12 col-sm-5 col-md-5 col-lg-5" >
 							<div class="progress progress-striped">
-								<div class="progress-bar progress-bar-primary" style="width:<?php echo $percentage; ?>%" data-toggle="tooltip" data-placement="bottom" title="<?php echo $score.' out of '.$total; ?>"> Progress </div>
+								<div class="progress-bar progress-bar-primary" style="width:<?php echo $percentage; ?>%" data-toggle="tooltip" data-placement="bottom" title="<?php echo $score.' out of '.$total; ?>"> <?php echo $score.' out of '.$total; ?> </div>
 							</div>
 						</td>
 						<td class="visible-xs-block visible-sm visible-md visible-lg text-right col-xs-12 col-sm-2 col-md-2 col-lg-2"><button class="btn btn-primary" data-link="<?php echo $row['quiz_id'] ?>">Take quiz</button></td>
@@ -69,7 +71,7 @@ if($result->num_rows>0){
 $(function(){
 	$('[data-toggle="tooltip"]').tooltip();
 	$("button.btn-primary").click(function(){
-		location.assign("index.php?page=quiz&id="+$(this).data("link"));
+		location.assign("../quiz/"+$(this).data("link"));
 	});
 });
 </script>

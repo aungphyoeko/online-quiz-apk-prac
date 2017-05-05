@@ -1,23 +1,23 @@
-body{
-background:#eee;
-overflow-x:hidden;
+body,html{
+	background:#eee;
+	overflow-x:hidden;
 }
 .height-control{
 	position: relative;
-  max-width:100vh;
-  max-height:100%;
-  margin:0 auto;
-  overflow: hidden;
+	max-width:100vh;
+	max-height:100%;
+	margin:0 auto;
+	overflow: hidden;
 }
 .height-control:before {
-  content: "";
-  display: block;
-  margin-top: 20%;
+	content: "";
+	display: block;
+	margin-top: 20%;
 }
 .child {
-  position: absolute;
-  top: 0;
-  left: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
 }
 /* ----------Login page ------------*/
 .login-wrap{
@@ -93,7 +93,6 @@ textarea{
 		top:0px;
 		right:0px;
 	}
-	
 }
 
 .progress-bar + .tooltip > .tooltip-inner {

@@ -23,12 +23,19 @@ if (isset($_GET['page'])) :
 		case 'quiz':
 			$show_quiz_page = true;
 			break;
-		default:
+		case 'result':
+			break;
+		case 'login':
 			$show_login_page=true;
+			break;
+		default:
+			header('location:login/');
 	}
 elseif(cookie_get('id')!=0):
 	$show_login_page=false;
 	$show_dashboard_page = true;
+else:
+	header('location:login/');
 endif;
 
 ?>

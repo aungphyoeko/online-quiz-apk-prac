@@ -26,13 +26,13 @@ $(function(){
 	
 	$("form").submit(function(e){
 		e.preventDefault();
-		$.post("login_process.php",
+		$.post("../login_process.php",
 		{
 			email:$("#email").val(),
 			password:$("#password").val()
 		},
 		function(result){
-			if(result == "success") location.assign("index.php");
+			if(result == "success") location.assign("../dashboard/");
 			else $("#password").after(div);
 		}
 		);

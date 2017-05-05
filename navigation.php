@@ -8,17 +8,17 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a href="#" class="navbar-brand">Home</a>
+			<a href="../dashboard/" class="navbar-brand">Home</a>
 		</div>
 
 	<!-- Collect the nav links, forms, and other content for toggling -->
 	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		<ul class="nav nav-pills navbar-nav">
-			<li><a href="#">Start Quiz</a></li>
+			<li><a href="../quiz/">Start Quiz</a></li>
 		</ul>
 		<ul class="nav nav-pills navbar-nav">		
-			<li><a href="#">View Result</a></li>
-			<li role="separator" class="divider"></li>
+			<li><a href="../result/">View Result</a></li>
+			<li role="../separator/" class="divider"></li>
 		</ul>
 
 		<ul class="nav navbar-nav navbar-right">
@@ -26,38 +26,15 @@
 			<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
 			Welcome <?php echo cookie_get('name'); ?><span class="caret"></span>&nbsp;&nbsp;</a>
 			<ul class="dropdown-menu">
-				<li><a href="#" id="profile">Profile</a></li>
+				<li><a href="../profile/" id="profile">Profile</a></li>
 				<li role="separator" class="divider"></li>
-				<li><a href="#" id="setting">Setting</a></li>
+				<li><a href="../setting/" id="setting">Setting</a></li>
 				<li role="separator" class="divider"></li>
-				<li><a href="#" id="logout">Logout</a></li>
+				<li><a href="../logout/" id="logout">Logout</a></li>
 			</ul>
 			</li>
 		</ul> 
 		</div><!-- /.navbar-collapse -->
 	</div><!-- /.container-fluid -->
-	<form action="index.php" method="get">
-		<input type="hidden" name="page" value="" id="page">
-	</form>
 </nav>
-<script>
-$(function(){
-	$("#logout").click(function(){
-		$("#page").val('logout');
-		$("#page").parent().submit();
-	});
-	$("#profile").click(function(){
-		$("#page").val('profile');
-		$("#page").parent().submit();
-	});
-	$("#setting").click(function(){
-		$("#page").val('setting');
-		$("#page").parent().submit();
-	});
-	$(".navbar-brand").click(function(){
-		$("#page").val('dashboard');
-		$("#page").parent().submit();
-	});
-});
-</script>
 <br/>

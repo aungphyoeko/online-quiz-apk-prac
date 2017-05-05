@@ -1,0 +1,4 @@
+RewriteEngine On
+RewriteRule ^quiz/([A-Za-z0-9-]+)?$ index.php?page=quiz&id=$1 [NC,L]
+RewriteRule ^([A-Za-z0-9-]+)?/$ index.php?page=$1 [NC,L]
+ErrorDocument 404 "<h1>Error 404. Page Not Found.</h1>"
